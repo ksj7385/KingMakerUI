@@ -1,0 +1,23 @@
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 메인 콘텐츠 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- 네비게이션바 -->
+        <include layout="@layout/nav_bar"/>
+        <!-- 바디 -->
+        <include layout="@layout/body"/>
+    </RelativeLayout>
+    <include
+        layout="@layout/slide_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
