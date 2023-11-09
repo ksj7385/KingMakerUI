@@ -1,15 +1,18 @@
-package com.gachon.kingmaker; // 프로젝트에 맞는 패키지 이름으로 변경하세요.
+package com.gachon.kingmaker;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class HomeActivity extends BaseActivity {
 
@@ -58,14 +61,29 @@ public class HomeActivity extends BaseActivity {
             }
         });
 
+        ListView listView = findViewById(R.id.menu_list);
 
+        // 예시 데이터 생성
+        List<ListItem> items = Arrays.asList(
+                new ListItem(ListItem.ItemType.RADIO_BUTTON, "라디오 버튼"),
+                new ListItem(ListItem.ItemType.SLIDER, ""),
+                new ListItem(ListItem.ItemType.OPTION_BUTTON, "옵션 버튼"),
+                new ListItem(ListItem.ItemType.TEXT_VIEW, "텍스트 뷰"),
+                new ListItem(ListItem.ItemType.RADIO_BUTTON, "라디오 버튼2"),
+                new ListItem(ListItem.ItemType.SLIDER, ""),
+                new ListItem(ListItem.ItemType.OPTION_BUTTON, "옵션 버튼2"),
+                new ListItem(ListItem.ItemType.TEXT_VIEW, "텍스트 뷰2"),
+                new ListItem(ListItem.ItemType.RADIO_BUTTON, "라디오 버튼3"),
+                new ListItem(ListItem.ItemType.SLIDER, ""),
+                new ListItem(ListItem.ItemType.OPTION_BUTTON, "옵션 버튼3"),
+                new ListItem(ListItem.ItemType.TEXT_VIEW, "텍스트 뷰3")
+        );
 
-
-
-
-
-
+        // 어댑터 생성 및 리스트뷰에 설정
+        CustomAdapter adapter = new CustomAdapter(this, items);
+        listView.setAdapter(adapter);
     }
+
 
     @Override
     public void onBackPressed() {

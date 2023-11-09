@@ -4,13 +4,13 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <!-- 배경으로 사용될 이미지뷰 -->
-    <ImageView
-        android:id="@+id/menu_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/profile_picture"
-        android:scaleType="centerCrop" />
+<!--    &lt;!&ndash; 배경으로 사용될 이미지뷰 &ndash;&gt;-->
+<!--    <ImageView-->
+<!--        android:id="@+id/menu_background"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:src="@drawable/profile_picture"-->
+<!--        android:scaleType="centerCrop" />-->
 
     <!-- 메뉴 상단의 로고 또는 타이틀 이미지 -->
     <ImageView
@@ -42,6 +42,5 @@
         android:dividerHeight="8dp"
         android:listSelector="@android:color/transparent" />
 
-    <!-- 여기에 추가로 다른 요소들을 배치할 수 있습니다 -->
 
 </RelativeLayout>
